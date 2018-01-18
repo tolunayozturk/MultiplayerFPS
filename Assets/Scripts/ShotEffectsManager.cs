@@ -11,7 +11,7 @@ public class ShotEffectsManager : MonoBehaviour
 	//Create the impact effect for our shots
 	public void Initialize()
 	{
-		impactEffect = Instantiate(impactPrefab).GetComponent<ParticleSystem>();
+			impactEffect = Instantiate(impactPrefab).GetComponent<ParticleSystem>();
 	}
 
 	//Play muzzle flash and audio
@@ -33,6 +33,8 @@ public class ShotEffectsManager : MonoBehaviour
 
 	public void DestroyBulletImpact()
 	{
-		Destroy (impactEffect.gameObject, 3f);
+		if (impactEffect != null) {
+			Destroy (impactEffect.gameObject, 3f);
+		}
 	}
 }
