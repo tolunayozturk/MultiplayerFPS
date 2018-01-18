@@ -28,6 +28,7 @@ public class PlayerShooting : NetworkBehaviour
 			ellapsedTime = 0f;
 			CmdFireShot (firePosition.position, firePosition.forward);
 		}
+		shotEffects.DestroyBulletImpact ();
 	}
 
 	[Command]
@@ -57,7 +58,8 @@ public class PlayerShooting : NetworkBehaviour
 		shotEffects.Initialize ();
 		shotEffects.PlayShotEffects ();
 
-		if (playImpact)
+		if (playImpact) {
 			shotEffects.PlayImpactEffect (point);
+		}
 	}
 }

@@ -30,4 +30,9 @@ public class ShotEffectsManager : MonoBehaviour
 		impactEffect.Stop();
 		impactEffect.Play();
 	}
+
+	public void DestroyBulletImpact()
+	{
+		Destroy (impactEffect.gameObject, 3f);
+	}
 }
