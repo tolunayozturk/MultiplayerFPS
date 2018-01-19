@@ -42,8 +42,11 @@ public class PlayerHealth : NetworkBehaviour
 		if (isLocalPlayer) {
 			//PlayerCanvas.canvas.FlashDamageEffect ();
 		}
-		if (died)
+		if (died) 
+		{
+			PlayerCanvas.canvas.PlayDeathAudio ();
 			player.Die ();
+		}
 	}
 
 	void OnHealthChanged(int value)
