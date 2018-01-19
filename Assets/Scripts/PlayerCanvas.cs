@@ -7,7 +7,7 @@ public class PlayerCanvas : MonoBehaviour
 
 	[Header("Component References")]
 	[SerializeField] Image reticule;
-	[SerializeField] UIFader damageImage;
+	//[SerializeField] UIFader damageImage;
 	[SerializeField] Text gameStatusText;
 	[SerializeField] Text healthValue;
 	[SerializeField] Text killsValue;
@@ -27,7 +27,7 @@ public class PlayerCanvas : MonoBehaviour
 	void Reset()
 	{
 		reticule = GameObject.Find ("Crosshair").GetComponent<Image> ();
-		damageImage = GameObject.Find ("DamagedFlash").GetComponent<UIFader> ();
+		//damageImage = GameObject.Find ("DamagedFlash").GetComponent<UIFader> ();
 		gameStatusText = GameObject.Find ("GameStatusText").GetComponent<Text> ();
 		healthValue = GameObject.Find ("HealthValue").GetComponent<Text> ();
 		killsValue = GameObject.Find ("KillsValue").GetComponent<Text> ();
@@ -48,7 +48,7 @@ public class PlayerCanvas : MonoBehaviour
 
 	public void FlashDamageEffect()
 	{
-		damageImage.Flash ();
+		//damageImage.Flash ();
 	}
 
 	public void PlayDeathAudio()
