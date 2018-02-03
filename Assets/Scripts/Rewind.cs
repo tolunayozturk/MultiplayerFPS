@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rewind : MonoBehaviour {
 
-	public bool isRewinding = false;
+    public bool isRewinding = false;
 
     public float recordTime = 5f;
 
