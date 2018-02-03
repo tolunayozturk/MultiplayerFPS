@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 114165894913156764}
   - component: {fileID: 95719762622688204}
   - component: {fileID: 114780179125378918}
+  - component: {fileID: 114116491109715750}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3015,6 +3016,19 @@ MonoBehaviour:
   shotCooldown: 0.3
   firePosition: {fileID: 4747627788137010}
   shotEffects: {fileID: 114835424808373592}
+--- !u!114 &114116491109715750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522875244864188}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14b041181f3fe04f9a40d679f610404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRewinding: 0
+  recordTime: 5
 --- !u!114 &114165894913156764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3076,6 +3090,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1294489439126410}
         m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114116491109715750}
+        m_MethodName: set_enabled
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
